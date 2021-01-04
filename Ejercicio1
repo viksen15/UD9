@@ -1,0 +1,38 @@
+
+using System;
+
+namespace Ejercicio1
+{
+    class Alumno
+    {
+        //ATRIBUTOS
+        string nombre;
+        int edad;
+
+        //CONSTRUCTOR
+        public Alumno(string n,int e)
+        {
+            nombre = n;
+            edad = e;
+        }
+
+
+        //METODOS
+        public void llenarAlumno()
+        { Console.WriteLine("Nombre del alumno: " + nombre);
+            Console.WriteLine("Edad alumno: " + edad);
+            if( edad >=18)
+            { Console.WriteLine("Es mayor de edad");
+            }else { Console.WriteLine("Es menor de edad"); }
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Alumno alumno = new Alumno("Viksen",25);
+            alumno.llenarAlumno();
+        }
+    }
+}
