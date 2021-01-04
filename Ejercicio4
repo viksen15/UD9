@@ -1,0 +1,29 @@
+using System;
+
+namespace Ejercicio4
+{
+    class Persona
+    {
+        //ATRIBUTO
+        string nombre;
+
+        //METODOS
+        public void SetNombre(string n)
+        { nombre = n; }
+        public void Saludar()
+        { Console.WriteLine("Hola, soy " + nombre); }
+    }
+    class PruebaPersona
+    {
+        static void Main(string[] args)
+        {
+            Persona persona1 = new Persona();
+            persona1.SetNombre("Viksen");
+            persona1.Saludar();
+
+            Persona persona2 = new Persona();
+            persona2.SetNombre("Javier");
+            persona2.Saludar();
+        }
+    }
+}
