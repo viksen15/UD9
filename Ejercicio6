@@ -1,0 +1,37 @@
+using System;
+
+namespace Ejercicio6
+{
+    class Coche
+    {
+        //ATRIBUTOS
+        string marca, modelo;
+        int cilindrada;
+        float potencia;
+
+        //CONSTRUCTOR
+        public Coche(string ma, string mo, int cil, float po)
+        { marca = ma;
+          modelo = mo;
+          cilindrada = cil;
+          potencia = po;
+        }
+
+        //METODO
+        public void datosCoche()
+        { Console.WriteLine("Marca: " + marca);
+            Console.WriteLine("Modelo: " + modelo);
+            Console.WriteLine("Cilindrada: " + cilindrada);
+            Console.WriteLine("Potencia: " + potencia);
+        }
+
+
+
+        static void Main(string[] args)
+        {
+        Coche coche = new Coche("VW", "Golf MK2", 1600, 70);
+            coche.datosCoche();
+
+        }
+    }
+}
