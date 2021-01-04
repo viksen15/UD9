@@ -1,0 +1,74 @@
+using System;
+
+namespace Ejercicio7
+{
+    class Persona
+    {
+        // ATRIBUTOS
+        private string nombre;
+        private int edad;
+        const int DNI = 554542;
+        private double peso, altura;
+        const string sexo = "hombre";
+        // CONSTRUCTOR
+        public Persona()
+        { }
+        public Persona(string nombre, int edad, string sexo)
+        {
+            this.nombre = nombre;
+            this.edad = edad;
+        }
+        public Persona(string nombre, int edad, int dni, double peso, double altura, string sexo)
+        {
+            this.nombre = nombre;
+            this.edad = edad;
+            this.peso = peso;
+            this.altura = altura;
+        }
+        //METODOS
+        public void constructor1()
+        {
+            Console.WriteLine("Nombre por defecto: " + nombre);
+            Console.WriteLine("Edad por defecto: " + edad);
+            Console.WriteLine("DNI por defecto: " + DNI);
+            Console.WriteLine("Peso por defecto: " + peso);
+            Console.WriteLine("Altura por defecto: " + altura);
+            Console.WriteLine("Sexo por defecto: " + sexo);
+        }
+        public void constructor2()
+        {
+            Console.WriteLine("Nombre " + nombre);
+            Console.WriteLine("Edad " + edad);
+            Console.WriteLine("DNI " + DNI);
+            Console.WriteLine("Peso " + peso);
+            Console.WriteLine("Altura " + altura);
+            Console.WriteLine("Sexo " + sexo);
+        }
+        public void constructor3()
+        {
+            Console.WriteLine("Nombre " + nombre);
+            Console.WriteLine("Edad " + edad);
+            Console.WriteLine("DNI " + DNI);
+            Console.WriteLine("Peso " + peso);
+            Console.WriteLine("Altura " + altura);
+            Console.WriteLine("Sexo " + sexo);
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Persona constructor1 = new Persona();
+            constructor1.constructor1();
+            Console.WriteLine("");
+            Persona constructor2 = new Persona("Viksen", 25, "");
+            constructor2.constructor2();
+            Console.WriteLine("");
+            Persona constructor3 = new Persona("Viksen", 25, 0 , 60.5, 1.77, "");
+            constructor3.constructor3();
+
+
+        }
+    }
+}
