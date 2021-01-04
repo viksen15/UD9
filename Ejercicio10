@@ -1,0 +1,72 @@
+using System;
+
+namespace Ejercicio10
+{
+   class Serie
+   {
+       // ATRIBUTOS
+       string titulo;
+       int numeroTemp = 3;
+       bool entregado = false;
+       string genero;
+       string creador;
+
+       // CONSTRUCTORES Y METODOS
+       public Serie()
+       { }
+       public void defecto()
+       {
+           Console.WriteLine("Titulo por defecto: " + titulo);
+           Console.WriteLine("Numero de temporadas por defecto: " + numeroTemp);
+           Console.WriteLine("Entregado por defecto: " + entregado);
+           Console.WriteLine("Genero por defecto: " + genero);
+           Console.WriteLine("Creador por defecto: " + creador);
+       }
+       public Serie(string tit, string crea)
+       { titulo = tit;
+           creador = crea;
+       }
+       public void constructor2()
+       {
+           Console.WriteLine("Titulo: " + titulo);
+           Console.WriteLine("Numero de temporadas: " + numeroTemp);
+           Console.WriteLine("Entregado: " + entregado);
+           Console.WriteLine("Genero: " + genero);
+           Console.WriteLine("Creador: " + creador);
+       }
+       public Serie(string titu, int numt, string gen, string cread)
+       {
+           titulo = titu;
+           numeroTemp = numt;
+           genero = gen;
+           creador = cread;
+       }
+       public void constructor3()
+       {
+           Console.WriteLine("Titulo: " + titulo);
+           Console.WriteLine("Numero de temporadas: " + numeroTemp);
+           Console.WriteLine("Entregado: " + entregado);
+           Console.WriteLine("Genero: " + genero);
+           Console.WriteLine("Creador: " + creador);
+       }
+
+   }
+   class Program
+   {
+       static void Main(string[] args)
+       {
+           Serie defecto = new Serie();
+           defecto.defecto();
+           Console.WriteLine("");
+
+           Serie num2 = new Serie("El patio", "Viksen");
+           num2.constructor2();
+           Console.WriteLine("");
+
+           Serie num3 = new Serie("La calle", 5, "drama", "Jose");
+           num3.constructor3();
+
+           Console.ReadKey();
+       }
+   }
+}
