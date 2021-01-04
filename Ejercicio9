@@ -1,0 +1,67 @@
+using System;
+
+namespace Ejercicio9
+{
+    class Electrodomestico
+    {
+        // ATRIBUTOS
+        double preciobase = 100;
+        string color = "blanco";
+        string consumoenergetico ="F";
+        double peso=5;
+        string[] colores = { "BLANCO", "blanco", "NEGRO", "negro", "ROJO", "rojo", "AZUL", "azul", "GRIS", "gris" };
+
+        // CONSTRUCTORES
+        public Electrodomestico()
+        {
+        }
+        public Electrodomestico(double preciob, double pes)
+        {
+            preciobase = preciob;
+            peso = pes;
+        }
+        public Electrodomestico(double preciob, string col, string consumo, double pes)
+        { preciobase = preciob;
+            color = col;
+            consumoenergetico = consumo;
+            peso = pes;        }
+
+        // METODOS
+        public void constructorDefecto()
+        {
+            Console.WriteLine("Precio base por defecto: " + preciobase);
+            Console.WriteLine("Color por defecto: " + color);
+            Console.WriteLine("Consumo energetico por defecto: " + consumoenergetico);
+            Console.WriteLine("Peso por defecto: " + peso);
+        }
+        public void constructor2()
+        {
+            Console.WriteLine("Precio base: " + preciobase);
+            Console.WriteLine("Color: " + color);
+            Console.WriteLine("Consumo energetico: " + consumoenergetico);
+            Console.WriteLine("Peso: " + peso);
+        }
+        public void constructor3()
+        {
+            Console.WriteLine("Precio base: " + preciobase);
+            Console.WriteLine("Color: " + color);
+            Console.WriteLine("Consumo energetico: " + consumoenergetico);
+            Console.WriteLine("Peso: " + peso);
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Electrodomestico defecto = new Electrodomestico();
+            defecto.constructorDefecto();
+            Console.WriteLine("");
+                Electrodomestico num2 = new Electrodomestico(250.95, 85.36);
+            num2.constructor2();
+            Console.WriteLine("");
+            Electrodomestico num3 = new Electrodomestico(150.6, "rojo", "A", 25.6);
+            num3.constructor3();
+        }
+    }
+}
