@@ -1,0 +1,52 @@
+using System;
+
+namespace Ejercicio3
+{
+    class Operaciones
+    {
+        int numero1;
+        int numero2;
+        //CONSTRUCTOR
+        public Operaciones(int num1, int num2)
+        {
+            numero1 = num1;
+            numero2 = num2;
+        }
+
+    //METODO SUMA
+        public void suma()
+        {
+            int suma = numero1 + numero2;
+            Console.WriteLine("La suma de " + numero1 + " + " + numero2 + " es: " + suma); }
+    //METODO RESTA
+        public void resta()
+        {
+            int resta = numero1 - numero2;
+            Console.WriteLine("La resta de " + numero1 + " - " + numero2 + " es: " + resta); }
+
+    //METODO MULTIPLICACION
+        public void multiplicacion()
+        {
+            int multiplicacion = numero1 * numero2;
+            Console.WriteLine("La multiplicacion de " + numero1 + " * " + numero2 + " es: " + multiplicacion); }
+
+    //METODO DIVISION
+        public void division()
+        {
+            int division = numero1 / numero2;
+            Console.WriteLine("La division de " + numero1 + " / " + numero2 + " es: " + division); }
+
+}
+
+class Program
+    {
+        static void Main(string[] args)
+        {
+            Operaciones operaciones = new Operaciones(5, 8);
+            operaciones.suma();
+            operaciones.resta();
+            operaciones.multiplicacion();
+            operaciones.division();
+        }
+    }
+}

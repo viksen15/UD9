@@ -1,0 +1,31 @@
+using System;
+
+namespace Ejercicio5
+{
+    class Libro
+    {
+        //ATRIBUTOS
+        private string autor, titulo, ubicacion;
+
+        // CONSTRUCTOR
+        public Libro (string autor, string titulo, string ubicacion)
+        { this.autor = autor;
+            this.titulo = titulo;
+            this.ubicacion = ubicacion;
+        }
+
+        //METODOS
+        public void escribirLibro()
+        { Console.WriteLine("Autor: " + autor);
+            Console.WriteLine("Titulo: " + titulo);
+            Console.WriteLine("Ubicacion " + ubicacion);
+        }
+
+
+        static void Main(string[] args)
+        {
+            Libro libro = new Libro("Viksen" , "Historia de una vida" , "Cambirls");
+            libro.escribirLibro();
+        }
+    }
+}

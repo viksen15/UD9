@@ -1,0 +1,49 @@
+using System;
+
+namespace Ejercicio8
+{
+    class Password
+    {
+        // ATRIBUTOS
+        int longitud = 8;
+        string contraseña;
+
+        //CONSTRUCTORES
+        public Password ()
+        { }
+        public Password(int lon, string contra)
+        { longitud = lon;
+            contraseña = contra;
+        }
+        // METODOS
+        public void constructor1()
+        { Console.WriteLine("Longitud de la contraseña: " + longitud);
+            Console.WriteLine("Contraseña: " + contraseña); }
+        public void constructor2()
+        { Console.WriteLine("Que longitud de contraseña desea?");
+            int longicontra = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("");
+
+            Console.WriteLine("Contraseña aleatoria: ");
+            Random rnd = new Random();
+            for (int i = 0; i < longicontra; i++)
+            {
+                rnd.Next(longicontra);
+                Console.Write(i);
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Password defecto = new Password();
+            defecto.constructor1();
+            Console.WriteLine("");
+
+            Password creado = new Password();
+            creado.constructor2();
+            Console.ReadKey();
+        }
+    }
+}
